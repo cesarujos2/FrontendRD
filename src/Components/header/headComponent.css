@@ -1,0 +1,37 @@
+.headerContainer {
+  width: 100vw;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  height: 68px;
+  background-color: #BF0909;
+}
+.container-header{
+  display: flex;
+  width: 72rem;
+  gap: 20px;
+  align-items: center;
+  height: 100%;
+}
+.headerContainer img {
+  height: 32px;
+}
+.mtc-container{
+  height: 50%;
+  border-left: 1px solid rgb(255, 255, 255);
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+}
+.headerContainer p {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875rem;
+  color: white;
+}
+
+@media (max-width: 72rem){
+  .container-header{
+    padding: 0 20px;
+  }
+}
