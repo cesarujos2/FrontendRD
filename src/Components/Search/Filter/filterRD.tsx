@@ -1,6 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import { Row } from 'react-bootstrap';
@@ -21,14 +20,13 @@ function FilterRD({getQueryRD}: any) {
         formValues['active_date'] = {...formValues['active_date'], [key]: value};
       }
     }
-    console.log(formValues)
     getQueryRD(formValues)
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form onChange={handleSubmit}>
       <Form.Group className="mb-3" as={Col}>
-        <Form.Label>Número de Resolucion</Form.Label>
+        <Form.Label>Número de Resolución</Form.Label>
         <Form.Control
           type="text"
           placeholder="0001-2020-MTC"
@@ -51,7 +49,7 @@ function FilterRD({getQueryRD}: any) {
         <Form.Control name='administrado' type="text" placeholder="Razón Social" />
       </Form.Group>
       <Row className="mb-3">
-        <Form.Label>Rango de fechas</Form.Label>
+        <Form.Label>Fecha de publicación</Form.Label>
         <Form.Group as={Col} md="6">
           <Form.Label>Inicio</Form.Label>
           <Form.Control
@@ -71,7 +69,7 @@ function FilterRD({getQueryRD}: any) {
           />
         </Form.Group>
       </Row>
-      <Button type="submit">Buscar</Button>
+      {/* <Button type="submit">Buscar</Button> */}
     </Form>
   );
 }

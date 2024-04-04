@@ -1,6 +1,6 @@
 import './App.css'
-import HeadComponent from './Components/Header/headComponent'
-import TitleComponent from './Components/Title/titleComponent'
+import HeadComponent from './Components/header/headComponent'
+import TitleComponent from './Components/title/titleComponent'
 import SearchRD from './Components/Search/SearchRD'
 
 function App() {

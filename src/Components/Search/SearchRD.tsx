@@ -32,7 +32,7 @@ function SearchRD() {
                 <FilterRD getQueryRD={setQuery} />
             </div>
             <div className='table-search section-search-container'>
-                {Object.keys(data).length > 0 ? <TableRD data={data} /> : "No hay Datos"}
+                <TableRD data={data}/>
             </div>
         </div>
     );
