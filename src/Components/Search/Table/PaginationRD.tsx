@@ -1,4 +1,5 @@
-import { Pagination } from "react-bootstrap";
+import { Pagination } from "@mui/material";
+
 
 function PaginationRD({ page, getPage, maxPage }: any) {
     const pageClick = (e: any) => {
@@ -9,14 +10,14 @@ function PaginationRD({ page, getPage, maxPage }: any) {
     if (maxPage >= 1) {
         for (let number = 1; number <= maxPage; number++) {
             items.push(
-                <Pagination.Item style={{display: "block", zIndex: "0"}} key={number} onClick={pageClick} active={number === page}>
+                <Pagination.Item key={number}  active={number === page}>
                     {number}
                 </Pagination.Item>,
             );
         }
     }
     return (
-        <Pagination>{items}</Pagination>
+        <div style={{display: "flex", justifyContent: "center"}} ><Pagination onClick={pageClick} count={maxPage} shape="rounded" page={page} /></div>
     )
 }
 

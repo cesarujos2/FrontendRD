@@ -6,7 +6,7 @@ const fetchApi = async (body: {}, page: number) => {
 
     let bodyContent = JSON.stringify(body);
 
-    let response = await fetch(`https://ccql8lh3-3001.use.devtunnels.ms/rd/api?max_results=0&page=${page}`, {
+    let response = await fetch(`http://localhost:3001/rd/api?max_results=0&page=${page}`, {
         method: "POST",
         body: bodyContent,
         headers: headersList

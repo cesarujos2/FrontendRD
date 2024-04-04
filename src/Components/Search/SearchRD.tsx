@@ -27,7 +27,7 @@ function SearchRD() {
     const [isLoading, setIsLoading] = useState(false);
     const [maxPage, setMaxPage] = useState(0)
 
-    
+
     useEffect(() => {
         if (Object.keys(query).length) {
             setIsLoading(true); // Activa la ventana de carga
