@@ -2,10 +2,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
-import { Row } from 'react-bootstrap';
+import { Button, Row } from 'react-bootstrap';
 
 
-function FilterRD({getQueryRD}: any) {
+function FilterRD({getQueryRD, setPage}: any) {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -21,10 +21,11 @@ function FilterRD({getQueryRD}: any) {
       }
     }
     getQueryRD(formValues)
+    setPage(1)
   };
 
   return (
-    <Form onChange={handleSubmit}>
+    <Form onSubmit={handleSubmit}>
       <Form.Group className="mb-3" as={Col}>
         <Form.Label>Número de Resolución</Form.Label>
         <Form.Control
@@ -69,7 +70,7 @@ function FilterRD({getQueryRD}: any) {
           />
         </Form.Group>
       </Row>
-      {/* <Button type="submit">Buscar</Button> */}
+      <Button type="submit">Buscar</Button>
     </Form>
   );
 }
